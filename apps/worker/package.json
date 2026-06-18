@@ -1,0 +1,12 @@
+{
+  "name": "@crux/worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Worker scaffold: queues and AI processing'",
+    "build": "echo 'Worker scaffold ready'"
+  },
+  "dependencies": {
+    "@crux/types": "workspace:*"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@crux/collab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'collab service scaffold'",
+    "build": "echo 'collab service ready'"
+  },
+  "dependencies": {
+    "@crux/types": "workspace:*"
+  }
+}

@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 232 35% 6%;
+    --foreground: 214 100% 96%;
+
+    --card: 228 30% 10%;
+    --card-foreground: 214 100% 96%;
+
+    --popover: 228 30% 10%;
+    --popover-foreground: 214 100% 96%;
+
+    --primary: 190 100% 62%;
+    --primary-foreground: 232 35% 6%;
+
+    --secondary: 258 100% 70%;
+    --secondary-foreground: 214 100% 96%;
+
+    --muted: 226 22% 16%;
+    --muted-foreground: 218 22% 68%;
+
+    --accent: 278 100% 64%;
+    --accent-foreground: 214 100% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 30% 22%;
+    --input: 220 30% 18%;
+    --ring: 190 100% 62%;
+
+    --radius: 0.75rem;
+    color-scheme: dark;
+
+    --surface: 228 35% 8%;
+    --surface-elevated: 224 28% 12%;
+    --surface-glass: 218 45% 94%;
+    --cyan: 190 100% 62%;
+    --violet: 258 100% 70%;
+    --fuchsia: 302 100% 67%;
+    --success: 152 84% 58%;
+    --warning: 38 100% 62%;
+    --line: 218 48% 84%;
+    --gradient-crux: radial-gradient(circle at 18% 10%, hsl(var(--cyan) / 0.24), transparent 26%), radial-gradient(circle at 78% 18%, hsl(var(--violet) / 0.2), transparent 30%), radial-gradient(circle at 48% 72%, hsl(var(--fuchsia) / 0.12), transparent 34%), linear-gradient(135deg, hsl(232 35% 6%), hsl(226 36% 9%) 52%, hsl(236 42% 7%));
+    --gradient-panel: linear-gradient(135deg, hsl(var(--surface-glass) / 0.12), hsl(var(--surface-glass) / 0.035));
+    --gradient-button: linear-gradient(135deg, hsl(var(--cyan)), hsl(var(--violet)) 52%, hsl(var(--fuchsia)));
+    --gradient-auth-mesh: radial-gradient(circle at 16% 22%, hsl(var(--primary) / 0.18), transparent 28%), radial-gradient(circle at 82% 18%, hsl(var(--secondary) / 0.15), transparent 31%), radial-gradient(circle at 54% 78%, hsl(var(--accent) / 0.12), transparent 34%);
+    --shadow-neon: 0 0 42px hsl(var(--cyan) / 0.22), 0 18px 70px hsl(var(--violet) / 0.12);
+    --shadow-panel: 0 24px 90px hsl(232 58% 3% / 0.72);
+    --shadow-auth: 0 34px 120px hsl(var(--background) / 0.78), 0 0 0 1px hsl(var(--line) / 0.14), inset 0 1px 0 hsl(var(--line) / 0.22), inset 0 -28px 90px hsl(var(--primary) / 0.055);
+    --error-soft: 350 84% 72%;
+    --font-display: Inter, Geist, Satoshi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+
+  :root[data-theme="contrast"] {
+    --background: 220 18% 3%;
+    --foreground: 48 100% 92%;
+    --card: 220 16% 7%;
+    --card-foreground: 48 100% 92%;
+    --popover: 220 16% 7%;
+    --popover-foreground: 48 100% 92%;
+    --primary: 47 100% 58%;
+    --primary-foreground: 220 18% 3%;
+    --secondary: 45 82% 48%;
+    --secondary-foreground: 220 18% 3%;
+    --muted: 220 14% 13%;
+    --muted-foreground: 48 24% 68%;
+    --accent: 39 100% 62%;
+    --accent-foreground: 220 18% 3%;
+    --border: 45 34% 20%;
+    --input: 45 28% 16%;
+    --ring: 47 100% 58%;
+    --surface: 220 18% 5%;
+    --surface-elevated: 220 16% 9%;
+    --surface-glass: 48 100% 92%;
+    --cyan: 47 100% 58%;
+    --violet: 39 100% 62%;
+    --fuchsia: 58 100% 68%;
+    --line: 48 100% 84%;
+    --gradient-crux: radial-gradient(circle at 20% 8%, hsl(var(--cyan) / 0.18), transparent 25%), radial-gradient(circle at 80% 18%, hsl(var(--violet) / 0.12), transparent 28%), linear-gradient(135deg, hsl(220 18% 3%), hsl(220 16% 7%) 55%, hsl(224 22% 4%));
+    --gradient-button: linear-gradient(135deg, hsl(var(--cyan)), hsl(var(--violet)));
+    --shadow-auth: 0 34px 120px hsl(220 18% 1% / 0.84), 0 0 0 1px hsl(var(--line) / 0.18), inset 0 1px 0 hsl(var(--line) / 0.22), inset 0 -28px 90px hsl(var(--primary) / 0.05);
+    --error-soft: 18 100% 70%;
+    color-scheme: dark;
+  }
+
+  :root[data-theme="green"] {
+    --background: 164 42% 5%;
+    --foreground: 152 60% 94%;
+    --card: 164 36% 9%;
+    --card-foreground: 152 60% 94%;
+    --popover: 164 36% 9%;
+    --popover-foreground: 152 60% 94%;
+    --primary: 151 82% 58%;
+    --primary-foreground: 164 42% 5%;
+    --secondary: 184 68% 56%;
+    --secondary-foreground: 164 42% 5%;
+    --muted: 165 28% 15%;
+    --muted-foreground: 154 22% 69%;
+    --accent: 118 76% 64%;
+    --accent-foreground: 164 42% 5%;
+    --border: 154 30% 21%;
+    --input: 154 26% 17%;
+    --ring: 151 82% 58%;
+    --surface: 164 42% 7%;
+    --surface-elevated: 165 35% 11%;
+    --surface-glass: 152 60% 94%;
+    --cyan: 151 82% 58%;
+    --violet: 184 68% 56%;
+    --fuchsia: 118 76% 64%;
+    --line: 152 60% 84%;
+    --gradient-crux: radial-gradient(circle at 18% 10%, hsl(var(--cyan) / 0.2), transparent 26%), radial-gradient(circle at 78% 18%, hsl(var(--violet) / 0.16), transparent 30%), linear-gradient(135deg, hsl(164 42% 5%), hsl(170 38% 8%) 52%, hsl(156 45% 6%));
+    --gradient-button: linear-gradient(135deg, hsl(var(--cyan)), hsl(var(--violet)) 55%, hsl(var(--fuchsia)));
+    --shadow-auth: 0 34px 120px hsl(164 52% 2% / 0.82), 0 0 0 1px hsl(var(--line) / 0.14), inset 0 1px 0 hsl(var(--line) / 0.18), inset 0 -28px 90px hsl(var(--primary) / 0.06);
+    --error-soft: 7 86% 72%;
+    color-scheme: dark;
+  }
+
+  :root[data-theme="light"] {
+    --background: 218 42% 96%;
+    --foreground: 226 35% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 226 35% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 226 35% 9%;
+    --primary: 224 76% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 265 78% 62%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 218 28% 90%;
+    --muted-foreground: 224 18% 38%;
+    --accent: 190 78% 45%;
+    --accent-foreground: 0 0% 100%;
+    --border: 220 22% 82%;
+    --input: 220 24% 86%;
+    --ring: 224 76% 54%;
+    --surface: 220 45% 98%;
+    --surface-elevated: 0 0% 100%;
+    --surface-glass: 226 35% 9%;
+    --cyan: 190 78% 45%;
+    --violet: 265 78% 62%;
+    --fuchsia: 318 72% 56%;
+    --line: 226 35% 22%;
+    --gradient-crux: radial-gradient(circle at 18% 10%, hsl(var(--cyan) / 0.16), transparent 28%), radial-gradient(circle at 78% 18%, hsl(var(--violet) / 0.14), transparent 30%), linear-gradient(135deg, hsl(218 42% 96%), hsl(220 55% 98%) 55%, hsl(216 42% 93%));
+    --gradient-panel: linear-gradient(135deg, hsl(0 0% 100% / 0.72), hsl(0 0% 100% / 0.34));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--violet)) 52%, hsl(var(--cyan)));
+    --shadow-panel: 0 24px 90px hsl(225 45% 28% / 0.14);
+    --shadow-auth: 0 34px 120px hsl(225 45% 28% / 0.16), 0 0 0 1px hsl(var(--line) / 0.14), inset 0 1px 0 hsl(0 0% 100% / 0.9), inset 0 -28px 90px hsl(var(--primary) / 0.045);
+    --error-soft: 350 72% 54%;
+    color-scheme: light;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-display);
+    background-image: var(--gradient-crux);
+    min-height: 100vh;
+    transition: background 500ms ease, background-color 500ms ease, color 500ms ease;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.28);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: var(--gradient-panel);
+    border: 1px solid hsl(var(--line) / 0.12);
+    box-shadow: var(--shadow-panel);
+    backdrop-filter: blur(24px);
+    transition: background 500ms ease, border-color 500ms ease, box-shadow 500ms ease, transform 300ms ease;
+  }
+
+  .auth-glass-panel {
+    background: linear-gradient(145deg, hsl(var(--surface-glass) / 0.15), hsl(var(--surface-glass) / 0.045) 46%, hsl(var(--surface) / 0.2));
+    border: 1px solid hsl(var(--line) / 0.14);
+    box-shadow: var(--shadow-auth);
+    backdrop-filter: blur(34px) saturate(1.28);
+    transition: background 500ms ease, border-color 500ms ease, box-shadow 500ms ease, transform 350ms ease;
+  }
+
+  .auth-glass-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(var(--line) / 0.32), hsl(var(--primary) / 0.28), transparent 46%, hsl(var(--secondary) / 0.2));
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .auth-noise {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--line) / 0.14) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+
+  .auth-mesh {
+    background-image: var(--gradient-auth-mesh);
+    background-size: 130% 130%;
+    animation: auth-mesh-drift 24s ease-in-out infinite alternate;
+  }
+
+  .auth-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 20%, hsl(var(--line) / 0.18) 45%, transparent 68%);
+    transform: translateX(-125%);
+    transition: transform 700ms ease;
+    pointer-events: none;
+  }
+
+  .auth-shimmer:hover::after {
+    transform: translateX(125%);
+  }
+
+  @keyframes auth-mesh-drift {
+    from { background-position: 0% 40%; transform: scale(1); }
+    to { background-position: 100% 58%; transform: scale(1.04); }
+  }
+
+  .text-gradient-crux {
+    background: var(--gradient-button);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .crux-grid {
+    background-image: linear-gradient(hsl(var(--line) / 0.055) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--line) / 0.055) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .mask-fade {
+    mask-image: radial-gradient(circle at center, black, transparent 72%);
+  }
+}

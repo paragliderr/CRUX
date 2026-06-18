@@ -1,0 +1,12 @@
+{
+  "name": "@crux/rag",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'rag service scaffold'",
+    "build": "echo 'rag service ready'"
+  },
+  "dependencies": {
+    "@crux/types": "workspace:*"
+  }
+}

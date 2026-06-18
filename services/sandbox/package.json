@@ -1,0 +1,12 @@
+{
+  "name": "@crux/sandbox",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'sandbox service scaffold'",
+    "build": "echo 'sandbox service ready'"
+  },
+  "dependencies": {
+    "@crux/types": "workspace:*"
+  }
+}

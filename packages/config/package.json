@@ -1,0 +1,6 @@
+{
+  "name": "@crux/config",
+  "private": true,
+  "type": "module",
+  "files": ["tsconfig.base.json", "eslint.config.js"]
+}

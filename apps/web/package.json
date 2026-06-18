@@ -1,0 +1,14 @@
+{
+  "name": "@crux/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite ../.. --config ../../vite.config.ts",
+    "build": "vite build ../.. --config ../../vite.config.ts",
+    "preview": "vite preview ../.. --config ../../vite.config.ts"
+  },
+  "dependencies": {
+    "@crux/ui": "workspace:*",
+    "@crux/types": "workspace:*"
+  }
+}
